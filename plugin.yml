@@ -1,0 +1,8 @@
+name: Quest
+version: 1.0
+api: 5.0.0
+main: quest\Quest
+author: baarist4
+permissions:
+  command.myquest:
+    default: true

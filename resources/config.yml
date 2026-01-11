@@ -1,0 +1,45 @@
+---
+# Görevlerin yenilenme süresi (Saniye cinsinden)
+# 900 saniye = 15 dakika
+refresh-time: 900
+
+# Mesajlar
+messages:
+  prefix: "§6[Görev] §r"
+  no-quest: "§cŞu an aktif bir görevin bulunmuyor."
+  quest-received: "§6§lYeni Görev! §r§e{name}\n§7 - §f{desc}\n§7 - §6Ödül: §a{reward}"
+  quest-completed: "§aTebrikler! §f{name} §agörevini tamamladın.\n§6Ödül hesabına yatırıldı."
+  gui-title: "§l§6Görevin"
+  gui-content: "Görev: {name}\n\nAçıklama: {desc}\n\nKalan: {goal}\n\nÖdül Bilgisi: {reward}"
+
+# Görev Listesi
+# type: 'chop_wood' (odun kırma) veya 'mine_stone' (taş kırma) olarak kodda tanımladığımız türler.
+quests:
+  oduncu_1:
+    type: "chop_wood"
+    name: "Çırak Oduncu"
+    description: "50 tane herhangi bir odun türü kes."
+    goal: 50
+    reward_text: "250 Coin"
+    commands:
+      - "givemoney {player} 250"
+      - "say {player} bir görev tamamladı!"
+  
+  oduncu_2:
+    type: "chop_wood"
+    name: "Usta Oduncu"
+    description: "100 tane odun kes."
+    goal: 100
+    reward_text: "500 Coin"
+    commands:
+      - "givemoney {player} 500"
+
+  madenci_1:
+    type: "mine_stone"
+    name: "Taşçı"
+    description: "100 tane taş veya kırıktaş kaz."
+    goal: 100
+    reward_text: "250 Coin"
+    commands:
+      - "givemoney {player} 250"
+...
